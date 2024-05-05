@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Base styling for the body */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+            padding-top: 20px;
+            transition: 0.3s;
+            overflow: hidden;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar .sidebar-header {
+            font-size: 24px;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+
+        /* Main content styling */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+            transition: 0.3s;
+        }
+
+        /* Section headers */
+        .section-header {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Data table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 0;
+                padding-top: 15px;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar with navigation links -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            Admin Dashboard
+        </div>
+        <a href="#students"><i class="fas fa-user-graduate"></i> Students</a>
+        <a href="#teachers"><i class="fas fa-chalkboard-teacher"></i> Teachers</a>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content">
+        <!-- Student Data Section -->
+        <div id="students">
+            <div class="section-header">Students</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Major</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td>Computer Science</td>
+                        <td>Senior</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Jane Smith</td>
+                        <td>Biology</td>
+                        <td>Junior</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Teacher Data Section -->
+        <div id="teachers">
+            <div class="section-header">Teachers</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Teacher ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Courses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>T001</td>
+                        <td>Dr. Emily Johnson</td>
+                        <td>Physics</td>
+                        <td>Physics I, Physics II</td>
+                    </tr>
+                    <tr>
+                        <td>T002</td>
+                        <td>Prof. Robert Brown</td>
+                        <td>Chemistry</td>
+                        <td>Organic Chemistry, Inorganic Chemistry</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
